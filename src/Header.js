@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -12,6 +13,6 @@ const Header = () => {
 };
 
 const Container = styled.div``;
-const styledLink = styled(Link)``;
+const StyledLink = styled(Link)``;
 
 export default Header;
