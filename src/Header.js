@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <Container>
       <img src="/images/myLogo.png" alt="Icon" />
-      <StyledLink>Home</StyledLink>
+      <StyledLink to="/">Home</StyledLink>
       <StyledLink></StyledLink>
     </Container>
   );
