@@ -6,6 +6,7 @@ import { ScrollRotate } from "react-scroll-rotate";
 import useScrollSnap from "react-use-scroll-snap";
 import ReactPlayer from "react-player";
 import { AiFillGithub } from "react-icons/ai";
+import MapAPI from "./MapsAPI";
 
 const Homepage = () => {
   //   const scrollRef = useRef(null);
@@ -13,7 +14,7 @@ const Homepage = () => {
   return (
     <Container>
       {/* ref={scrollRef}> */}
-      <WelcomeDiv>
+      <WelcomeDiv id="home">
         <Div1>
           <Fade top>
             <H1>Hi! I'm Sarah</H1>
@@ -31,7 +32,7 @@ const Homepage = () => {
       <ArrowDiv>
         <ImgArrow src="/images/arrow.png" alt="arrow" />
       </ArrowDiv>
-      <AboutMeDiv>
+      <AboutMeDiv id="about">
         <ImgMe src="/images/Me.png" alt="picture of me" />
         <Fade top>
           <Div2>
@@ -46,8 +47,8 @@ const Homepage = () => {
           </Div2>
         </Fade>
       </AboutMeDiv>
-      <ProjectDiv>
-        <H2>My Projects</H2>
+      <ProjectDiv id="projects">
+        <H2>Projects</H2>
         <Projects>
           <ReactPlayer url="https://youtu.be/t3SIcS5H8iA" />
           <Div3>
@@ -86,7 +87,7 @@ const Homepage = () => {
         </Projects>
         <Projects style={{ marginTop: "150px" }}>
           <Div3 style={{ textAlign: "right" }}>
-            <P style={{ fontWeight: "bold" }}>Pet Centre Nature - Rebrand</P>
+            <P style={{ fontWeight: "bold" }}>Cyborg Social Club</P>
             <PSmall>
               Cyborg Social Club is a fictional store where we sell futuristic
               tech. The goal of this project is to build from scratch a fully
@@ -113,6 +114,27 @@ const Homepage = () => {
           </video>
         </Projects>
       </ProjectDiv>
+      <ContactDiv id="contact">
+        <H2>Contact</H2>
+        <Div4>
+          <MapDiv>
+            <MapAPI />
+            <P>Greater Montreal Area</P>
+          </MapDiv>
+          <FormDiv>
+            <P>See anything you like? Don't hesitate to contact me!</P>
+            {/* <Form>
+              <Label>Full Name</Label>
+              <Input type="text" htmlFor="Fname" name="fullName" />
+              <Label>Email</Label>
+              <Input type="email" htmlFor="email" name="Email" />
+              <Label>Message</Label>
+              <Input type="text" htmlFor="Message" name="Message" />
+            </Form>
+            <Button>Submit</Button> */}
+          </FormDiv>
+        </Div4>
+      </ContactDiv>
     </Container>
   );
 };
@@ -203,4 +225,23 @@ const PSmall = styled.p`
   margin-bottom: 13px;
   margin-top: 13px;
 `;
+
+const ContactDiv = styled.div`
+  background-color: #f2efe9;
+  padding: 100px;
+`;
+
+const MapDiv = styled.div``;
+const FormDiv = styled.div``;
+const Div4 = styled.div`
+  display: flex;
+`;
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+`;
+const Input = styled.input``;
+const Label = styled.label``;
+const Button = styled.button``;
 export default Homepage;

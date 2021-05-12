@@ -1,16 +1,26 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 const Header = () => {
   return (
     <Container>
-      <Img src="/images/myLogo.png" alt="Icon" />
+      <StyledLink to="home" spy={true} smooth={true}>
+        <Img src="/images/myLogo.png" alt="Icon" />
+      </StyledLink>
       <LinkDiv>
-        <StyledLink>Home</StyledLink>
-        <StyledLink>about</StyledLink>
-        <StyledLink>Projects</StyledLink>
-        <StyledLink>Contact</StyledLink>
+        <StyledLink LinkactiveClass="active" to="home" spy={true} smooth={true}>
+          Home
+        </StyledLink>
+        <StyledLink to="about" spy={true} smooth={true}>
+          about
+        </StyledLink>
+        <StyledLink to="projects" spy={true} smooth={true}>
+          Projects
+        </StyledLink>
+        <StyledLink to="contact" spy={true} smooth={true}>
+          Contact
+        </StyledLink>
       </LinkDiv>
     </Container>
   );
