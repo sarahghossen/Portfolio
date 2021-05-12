@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
+import { AiFillGithub } from "react-icons/ai";
+import { AiOutlineLinkedin } from "react-icons/ai";
+import { HiOutlineMail } from "react-icons/hi";
 
 const Header = () => {
   return (
@@ -20,6 +23,15 @@ const Header = () => {
         </StyledLink>
         <StyledLink to="contact" spy={true} smooth={true}>
           Contact
+        </StyledLink>
+        <StyledLink href="https://github.com/sarahghossen">
+          <AiFillGithub />
+        </StyledLink>
+        <StyledLink>
+          <AiOutlineLinkedin />
+        </StyledLink>
+        <StyledLink>
+          <HiOutlineMail />
         </StyledLink>
       </LinkDiv>
     </Container>
@@ -46,6 +58,7 @@ const StyledLink = styled(Link)`
   -moz-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
   cursor: pointer;
+  font-size: 20px;
   &:hover {
     color: #6da06e;
   }
