@@ -1,12 +1,11 @@
-import react, { useRef } from "react";
+import react from "react";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
-import { Link } from "react-router-dom";
 import { ScrollRotate } from "react-scroll-rotate";
-import useScrollSnap from "react-use-scroll-snap";
 import ReactPlayer from "react-player";
 import { AiFillGithub } from "react-icons/ai";
-import MapAPI from "./MapsAPI";
+import { AiOutlineLinkedin } from "react-icons/ai";
+import { HiOutlineMail } from "react-icons/hi";
 
 const Homepage = () => {
   //   const scrollRef = useRef(null);
@@ -86,7 +85,13 @@ const Homepage = () => {
           </Div3>
         </Projects>
         <Projects style={{ marginTop: "150px" }}>
-          <Div3 style={{ textAlign: "right" }}>
+          <video controls style={{ width: "33vw" }}>
+            <source
+              src="https://res.cloudinary.com/sourcedev-hajar/video/upload/v1620165275/Cyborg%20Store%20Demo.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <Div3>
             <P style={{ fontWeight: "bold" }}>Cyborg Social Club</P>
             <PSmall>
               Cyborg Social Club is a fictional store where we sell futuristic
@@ -106,33 +111,40 @@ const Homepage = () => {
               <AiFillGithub />
             </a>
           </Div3>
-          <video controls style={{ width: "33vw" }}>
-            <source
-              src="https://res.cloudinary.com/sourcedev-hajar/video/upload/v1620165275/Cyborg%20Store%20Demo.mp4"
-              type="video/mp4"
-            />
-          </video>
         </Projects>
       </ProjectDiv>
       <ContactDiv id="contact">
         <H2>Contact</H2>
         <Div4>
-          <MapDiv>
-            <MapAPI />
-            <P>Greater Montreal Area</P>
-          </MapDiv>
           <FormDiv>
             <P>See anything you like? Don't hesitate to contact me!</P>
-            {/* <Form>
-              <Label>Full Name</Label>
-              <Input type="text" htmlFor="Fname" name="fullName" />
-              <Label>Email</Label>
-              <Input type="email" htmlFor="email" name="Email" />
-              <Label>Message</Label>
-              <Input type="text" htmlFor="Message" name="Message" />
-            </Form>
-            <Button>Submit</Button> */}
           </FormDiv>
+          <IconDiv2>
+            <IconDiv>
+              <a
+                style={{ color: "#6da06e", fontSize: "40px" }}
+                href="https://github.com/sarahghossen"
+              >
+                <AiFillGithub />
+              </a>
+            </IconDiv>
+            <IconDiv>
+              <a
+                style={{ color: "#6da06e", fontSize: "40px" }}
+                href="https://www.linkedin.com/in/sarahghossen/"
+              >
+                <AiOutlineLinkedin />
+              </a>
+            </IconDiv>
+            <IconDiv>
+              <a
+                style={{ color: "#6da06e", fontSize: "40px" }}
+                href="mailto:ghossensarah@gmail.com"
+              >
+                <HiOutlineMail />
+              </a>
+            </IconDiv>
+          </IconDiv2>
         </Div4>
       </ContactDiv>
     </Container>
@@ -231,17 +243,20 @@ const ContactDiv = styled.div`
   padding: 100px;
 `;
 
-const MapDiv = styled.div``;
 const FormDiv = styled.div``;
-const Div4 = styled.div`
-  display: flex;
-`;
 
-const Form = styled.form`
+const Div4 = styled.div`
   display: flex;
   flex-direction: column;
 `;
-const Input = styled.input``;
-const Label = styled.label``;
-const Button = styled.button``;
+
+const IconDiv = styled.div`
+  margin-right: 20px;
+  margin-top: 20px;
+`;
+
+const IconDiv2 = styled.div`
+  display: flex;
+`;
+
 export default Homepage;

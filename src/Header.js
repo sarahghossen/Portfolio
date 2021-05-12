@@ -24,15 +24,15 @@ const Header = () => {
         <StyledLink to="contact" spy={true} smooth={true}>
           Contact
         </StyledLink>
-        <StyledLink href="https://github.com/sarahghossen">
+        <IconDiv href="https://github.com/sarahghossen">
           <AiFillGithub />
-        </StyledLink>
-        <StyledLink>
+        </IconDiv>
+        <IconDiv href="https://www.linkedin.com/in/sarahghossen/">
           <AiOutlineLinkedin />
-        </StyledLink>
-        <StyledLink>
+        </IconDiv>
+        <IconDiv href="mailto:ghossensarah@gmail.com">
           <HiOutlineMail />
-        </StyledLink>
+        </IconDiv>
       </LinkDiv>
     </Container>
   );
@@ -66,6 +66,21 @@ const StyledLink = styled(Link)`
 const LinkDiv = styled.div``;
 const Img = styled.img`
   width: 50px;
+`;
+
+const IconDiv = styled.a`
+  margin-right: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #474747;
+  -webkit-transition: ease-out 0.3s;
+  -moz-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+  cursor: pointer;
+  font-size: 20px;
+  &:hover {
+    color: #6da06e;
+  }
 `;
 
 export default Header;
