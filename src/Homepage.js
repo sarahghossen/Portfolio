@@ -84,6 +84,34 @@ const Homepage = () => {
             </a>
           </Div3>
         </Projects>
+        <Projects style={{ marginTop: "150px" }}>
+          <Div3 style={{ textAlign: "right" }}>
+            <P style={{ fontWeight: "bold" }}>Pet Centre Nature - Rebrand</P>
+            <PSmall>
+              Cyborg Social Club is a fictional store where we sell futuristic
+              tech. The goal of this project is to build from scratch a fully
+              functional e-commerce store, working with both the front and
+              back-end. The focus was good teamwork, strong communication and a
+              good workflow.
+            </PSmall>
+            <PSmall>
+              Tools used include: React.js, Redux, Node.js and MongoDB.
+            </PSmall>
+            <PSmall>For more information on the project:</PSmall>
+            <a
+              style={{ color: "#6da06e", fontSize: "30px" }}
+              href="https://github.com/sarahghossen/Cyborg-Social-Club"
+            >
+              <AiFillGithub />
+            </a>
+          </Div3>
+          <video controls style={{ width: "33vw" }}>
+            <source
+              src="https://res.cloudinary.com/sourcedev-hajar/video/upload/v1620165275/Cyborg%20Store%20Demo.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </Projects>
       </ProjectDiv>
     </Container>
   );
@@ -157,7 +185,7 @@ const ImgMe = styled.img`
 
 const ProjectDiv = styled.div`
   background-color: #f2efe9;
-  padding: 200px;
+  padding: 170px;
 `;
 
 const Projects = styled.div`
@@ -167,10 +195,11 @@ const Projects = styled.div`
 const Div3 = styled.div`
   width: 50vw;
   margin-left: 30px;
+  margin-right: 30px;
 `;
 
 const PSmall = styled.p`
-  font-size: 15px;
+  font-size: 17px;
   margin-bottom: 13px;
   margin-top: 13px;
 `;
