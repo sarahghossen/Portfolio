@@ -66,13 +66,12 @@ const Homepage = () => {
             <PSmall>
               Note: This project is for educational purposes only and Pet Centre
               Nature retains 100% of their intellectual properties and brand.
-              Not all information is accurate to Pet Centre Nature. Find out
-              more about them here:{" "}
+              Find out more about them{" "}
               <a
                 href="http://en.naturepet.com/"
                 style={{ textDecoration: "none", color: "#6da06e" }}
               >
-                http://en.naturepet.com/
+                here
               </a>
             </PSmall>
             <PSmall>For more information on the project:</PSmall>
@@ -85,7 +84,7 @@ const Homepage = () => {
           </Div3>
         </Projects>
         <Projects style={{ marginTop: "150px" }}>
-          <video controls style={{ width: "33vw" }}>
+          <video controls style={{ width: "630px" }}>
             <source
               src="https://res.cloudinary.com/sourcedev-hajar/video/upload/v1620165275/Cyborg%20Store%20Demo.mp4"
               type="video/mp4"
@@ -224,23 +223,25 @@ const ProjectDiv = styled.div`
 
 const Projects = styled.div`
   display: flex;
+  align-items: center;
+  border: 2px solid #6da06e;
 `;
 
 const Div3 = styled.div`
-  width: 50vw;
+  width: 30vw;
   margin-left: 30px;
   margin-right: 30px;
 `;
 
 const PSmall = styled.p`
-  font-size: 17px;
+  font-size: 15px;
   margin-bottom: 13px;
   margin-top: 13px;
 `;
 
 const ContactDiv = styled.div`
   background-color: #f2efe9;
-  padding: 100px;
+  padding: 170px;
 `;
 
 const FormDiv = styled.div``;
