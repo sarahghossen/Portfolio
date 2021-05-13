@@ -8,11 +8,8 @@ import { AiOutlineLinkedin } from "react-icons/ai";
 import { HiOutlineMail } from "react-icons/hi";
 
 const Homepage = () => {
-  //   const scrollRef = useRef(null);
-  //   useScrollSnap({ ref: scrollRef, duration: 100, delay: 50 });
   return (
     <Container>
-      {/* ref={scrollRef}> */}
       <WelcomeDiv id="home">
         <Div1>
           <Fade top>

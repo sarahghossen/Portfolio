@@ -16,7 +16,7 @@ const Header = () => {
           Home
         </StyledLink>
         <StyledLink to="about" spy={true} smooth={true}>
-          about
+          About
         </StyledLink>
         <StyledLink to="projects" spy={true} smooth={true}>
           Projects
