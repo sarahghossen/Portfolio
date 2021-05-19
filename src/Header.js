@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 import { AiFillGithub } from "react-icons/ai";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { HiOutlineMail } from "react-icons/hi";
+import { useMediaQuery } from "./useMediaQuery";
 
 const Header = () => {
-  return (
+  const [burger, setBurger] = useState(false);
+  let isPageWide = useMediaQuery("(min-width: 900px)");
+
+  const handleLink = () => {
+    setBurger(!burger);
+  };
+
+  return isPageWide ? (
     <Container>
       <StyledLink to="home" spy={true} smooth={true}>
         <Img src="/images/myLogo.png" alt="Icon" />
@@ -35,8 +43,146 @@ const Header = () => {
         </IconDiv>
       </LinkDiv>
     </Container>
+  ) : (
+    // Mobile
+    <ContainerMobile>
+      <StyledLinkMobile to="home" spy={true} smooth={true}>
+        <Img src="/images/myLogo.png" alt="Icon" />
+      </StyledLinkMobile>
+      <ButtonDiv>
+        <Burger
+          onClick={() => {
+            setBurger(!burger);
+          }}
+        ></Burger>
+      </ButtonDiv>
+      <LinkDivMobile burger={burger}>
+        <UL>
+          <LI>
+            <StyledLinkMobile
+              onClick={() => setBurger(!burger)}
+              LinkactiveClass="active"
+              to="home"
+              spy={true}
+              smooth={true}
+            >
+              Home
+            </StyledLinkMobile>
+          </LI>
+          <LI>
+            <StyledLinkMobile
+              onClick={() => setBurger(!burger)}
+              to="about"
+              spy={true}
+              smooth={true}
+            >
+              About
+            </StyledLinkMobile>
+          </LI>
+          <LI>
+            <StyledLinkMobile
+              onClick={() => setBurger(!burger)}
+              to="projects"
+              spy={true}
+              smooth={true}
+            >
+              Projects
+            </StyledLinkMobile>
+          </LI>
+          <LI>
+            <StyledLinkMobile
+              onClick={() => setBurger(!burger)}
+              to="contact"
+              spy={true}
+              smooth={true}
+            >
+              Contact
+            </StyledLinkMobile>
+          </LI>
+        </UL>
+        {/* <IconDiv href="https://github.com/sarahghossen">
+        <AiFillGithub />
+      </IconDiv>
+      <IconDiv href="https://www.linkedin.com/in/sarahghossen/">
+        <AiOutlineLinkedin />
+      </IconDiv>
+      <IconDiv href="mailto:ghossensarah@gmail.com">
+        <HiOutlineMail />
+      </IconDiv> */}
+      </LinkDivMobile>
+    </ContainerMobile>
   );
 };
+
+const ContainerMobile = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #f2efe9;
+`;
+
+const StyledLinkMobile = styled(Link)`
+  margin-right: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #474747;
+  cursor: pointer;
+  font-size: 20px;
+  &:hover {
+    color: #6da06e;
+  }
+`;
+
+const LinkDivMobile = styled.nav`
+  width: ${(props) => (props.burger ? "0%" : "100%")};
+  transition: 0.5s;
+  position: absolute;
+  overflow-x: hidden;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 9;
+  align-items: center;
+  background-color: #6da06e;
+`;
+
+const ButtonDiv = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+`;
+
+const Burger = styled.button`
+  background-image: url("/images/burger.png");
+  text-decoration: none;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border: none;
+  z-index: 10;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  &:focus {
+    background-color: #6da06e;
+  }
+`;
+
+const UL = styled.ul`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const LI = styled.li`
+  transition: all 0.2s ease;
+  padding: 5px;
+  text-align: center;
+  /* width: 100vw; */
+`;
 
 const Container = styled.div`
   display: flex;
@@ -49,6 +195,7 @@ const Container = styled.div`
   border-bottom: 2px solid #6da06e;
   z-index: 10;
 `;
+
 const StyledLink = styled(Link)`
   margin-right: 20px;
   text-decoration: none;
@@ -63,7 +210,9 @@ const StyledLink = styled(Link)`
     color: #6da06e;
   }
 `;
+
 const LinkDiv = styled.div``;
+
 const Img = styled.img`
   width: 50px;
 `;
