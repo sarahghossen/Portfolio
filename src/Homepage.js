@@ -81,12 +81,12 @@ const Homepage = () => {
           </Div3>
         </Projects>
         <Projects style={{ marginTop: "150px" }}>
-          <video controls style={{ width: "630px" }}>
+          <Video controls>
             <source
               src="https://res.cloudinary.com/sourcedev-hajar/video/upload/v1620165275/Cyborg%20Store%20Demo.mp4"
               type="video/mp4"
             />
-          </video>
+          </Video>
           <Div3>
             <P style={{ fontWeight: "bold" }}>Cyborg Social Club</P>
             <PSmall>
@@ -147,10 +147,16 @@ const Homepage = () => {
   );
 };
 
+const Video = styled.video`
+  width: 630px;
+  @media (max-width: 900px) {
+    width: 90vw;
+  }
+`;
 const Container = styled.div`
   background-color: #f2efe9;
   /* height: 100vh; */
-  width: 100%;
+  width: 100vw;
   overflow-x: hidden;
 `;
 
@@ -160,14 +166,24 @@ const WelcomeDiv = styled.div`
   align-items: center;
   height: 90vh;
   margin-bottom: 30px;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    text-align: center;
+  }
 `;
 
 const Div1 = styled.div`
   width: 50vw;
+  @media (max-width: 900px) {
+    width: 95vw;
+  }
 `;
 
 const Img = styled.img`
   width: 10vw;
+  @media (max-width: 900px) {
+    width: 30vw;
+  }
 `;
 const ImgArrow = styled.img`
   width: 30px;
@@ -182,6 +198,9 @@ const H1 = styled.h1`
   font-size: 5em;
   color: #595959;
   margin-bottom: 30px;
+  @media (max-width: 900px) {
+    font-size: 4.5em;
+  }
 `;
 
 const P = styled.p`
@@ -195,8 +214,10 @@ const AboutMeDiv = styled.div`
   justify-content: center;
   align-items: center;
   padding: 200px;
-  /* padding: 100px; */
-  /* height: 60vh; */
+  @media (max-width: 900px) {
+    flex-direction: column;
+    padding: 20px;
+  }
 `;
 
 const H2 = styled.div`
@@ -208,38 +229,67 @@ const H2 = styled.div`
 
 const Div2 = styled.div`
   margin-left: 50px;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    padding: 20px;
+    margin-left: 0px;
+    text-align: center;
+  }
 `;
 
 const ImgMe = styled.img`
-  width: 30vw;
+  width: 40vw;
+  @media (max-width: 900px) {
+    width: 70vw;
+  }
 `;
 
 const ProjectDiv = styled.div`
   background-color: #f2efe9;
   padding: 170px;
+  @media (max-width: 900px) {
+    padding: 20px;
+    text-align: center;
+  }
 `;
 
 const Projects = styled.div`
   display: flex;
   align-items: center;
   border: 2px solid #6da06e;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
 `;
 
 const Div3 = styled.div`
   width: 30vw;
   margin-left: 30px;
   margin-right: 30px;
+  @media (max-width: 900px) {
+    width: 80vw;
+  }
 `;
 
 const PSmall = styled.p`
   font-size: 15px;
   margin-bottom: 13px;
   margin-top: 13px;
+  @media (max-width: 900px) {
+    width: 80vw;
+  }
 `;
 
 const ContactDiv = styled.div`
   background-color: #f2efe9;
   padding: 170px;
+  @media (max-width: 900px) {
+    padding: 20px;
+    text-align: center;
+  }
 `;
 
 const FormDiv = styled.div``;
@@ -256,6 +306,9 @@ const IconDiv = styled.div`
 
 const IconDiv2 = styled.div`
   display: flex;
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
 `;
 
 export default Homepage;
