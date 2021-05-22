@@ -8,12 +8,8 @@ import { useMediaQuery } from "./useMediaQuery";
 import { slide as Menu } from "react-burger-menu";
 
 const Header = () => {
-  // const [burger, setBurger] = useState(false);
+  const [burger, setBurger] = useState(false);
   let isPageWide = useMediaQuery("(min-width: 900px)");
-
-  // const handleLink = () => {
-  //   setBurger(!burger);
-  // };
 
   return isPageWide ? (
     <Container>
@@ -45,85 +41,66 @@ const Header = () => {
       </LinkDiv>
     </Container>
   ) : (
-    <Container>
-      <StyledLink to="home" spy={true} smooth={true}>
-        <Img src="/images/myLogo.png" alt="Icon" />
-      </StyledLink>
-      <LinkDiv>
-        <StyledLink LinkactiveClass="active" to="home" spy={true} smooth={true}>
-          Home
-        </StyledLink>
-        <StyledLink to="about" spy={true} smooth={true}>
-          About
-        </StyledLink>
-        <StyledLink to="projects" spy={true} smooth={true}>
-          Projects
-        </StyledLink>
-        <StyledLink to="contact" spy={true} smooth={true}>
-          Contact
-        </StyledLink>
-      </LinkDiv>
-    </Container>
     // Mobile
-    // <ContainerMobile>
-    //   <StyledLinkMobile to="home" spy={true} smooth={true}>
-    //     <Img src="/images/myLogo.png" alt="Icon" />
-    //   </StyledLinkMobile>
-    //   <ButtonDiv>
-    //     <Burger
-    //       onClick={() => {
-    //         setBurger(!burger);
-    //       }}
-    //     ></Burger>
-    //   </ButtonDiv>
-    //   <Menu styles>
-    //     <LinkDivMobile burger={burger}>
-    //       <UL>
-    //         <LI>
-    //           <StyledLinkMobile
-    //             onClick={() => setBurger(!burger)}
-    //             LinkactiveClass="active"
-    //             to="home"
-    //             spy={true}
-    //             smooth={true}
-    //           >
-    //             Home
-    //           </StyledLinkMobile>
-    //         </LI>
-    //         <LI>
-    //           <StyledLinkMobile
-    //             onClick={() => setBurger(!burger)}
-    //             to="about"
-    //             spy={true}
-    //             smooth={true}
-    //           >
-    //             About
-    //           </StyledLinkMobile>
-    //         </LI>
-    //         <LI>
-    //           <StyledLinkMobile
-    //             onClick={() => setBurger(!burger)}
-    //             to="projects"
-    //             spy={true}
-    //             smooth={true}
-    //           >
-    //             Projects
-    //           </StyledLinkMobile>
-    //         </LI>
-    //         <LI>
-    //           <StyledLinkMobile
-    //             onClick={() => setBurger(!burger)}
-    //             to="contact"
-    //             spy={true}
-    //             smooth={true}
-    //           >
-    //             Contact
-    //           </StyledLinkMobile>
-    //         </LI>
-    //       </UL>
-    //     </LinkDivMobile>
-    //   </Menu>
-    // </ContainerMobile>
+    <ContainerMobile>
+      <StyledLinkMobile to="home" spy={true} smooth={true}>
+        <Img src="/images/myLogo.png" alt="Icon" />
+      </StyledLinkMobile>
+      <ButtonDiv>
+        <Burger
+          onClick={() => {
+            setBurger(!burger);
+          }}
+        ></Burger>
+      </ButtonDiv>
+      <Menu styles>
+        <LinkDivMobile burger={burger}>
+          <UL>
+            <LI>
+              <StyledLinkMobile
+                onClick={() => setBurger(!burger)}
+                LinkactiveClass="active"
+                to="home"
+                spy={true}
+                smooth={true}
+              >
+                Home
+              </StyledLinkMobile>
+            </LI>
+            <LI>
+              <StyledLinkMobile
+                onClick={() => setBurger(!burger)}
+                to="about"
+                spy={true}
+                smooth={true}
+              >
+                About
+              </StyledLinkMobile>
+            </LI>
+            <LI>
+              <StyledLinkMobile
+                onClick={() => setBurger(!burger)}
+                to="projects"
+                spy={true}
+                smooth={true}
+              >
+                Projects
+              </StyledLinkMobile>
+            </LI>
+            <LI>
+              <StyledLinkMobile
+                onClick={() => setBurger(!burger)}
+                to="contact"
+                spy={true}
+                smooth={true}
+              >
+                Contact
+              </StyledLinkMobile>
+            </LI>
+          </UL>
+        </LinkDivMobile>
+      </Menu>
+    </ContainerMobile>
   );
 };
 
@@ -131,20 +108,21 @@ const ContainerMobile = styled.div`
   display: flex;
   justify-content: center;
   width: 100vw;
-  overflow: hidden;
   background-color: #f2efe9;
 `;
 
 const StyledLinkMobile = styled(Link)`
-  margin-right: 20px;
   text-decoration: none;
   font-weight: bold;
   color: #474747;
   cursor: pointer;
   font-size: 20px;
-  &:hover {
+  /* &:hover {
     color: #6da06e;
   }
+  &:focus {
+    color: #6da06e;
+  } */
 `;
 
 const LinkDivMobile = styled.nav`
@@ -152,17 +130,16 @@ const LinkDivMobile = styled.nav`
   transition: 0.5s;
   position: absolute;
   overflow-x: hidden;
-  right: 0;
   display: flex;
+  right: 0;
   flex-direction: column;
   justify-content: center;
-  z-index: 9;
   align-items: center;
   background-color: #6da06e;
 `;
 
 const ButtonDiv = styled.div`
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: flex-end;
 `;
@@ -170,11 +147,12 @@ const ButtonDiv = styled.div`
 const Burger = styled.button`
   background-image: url("/images/burger.png");
   text-decoration: none;
-  background-size: cover;
+  background-size: 50px;
+  background-repeat: no-repeat;
   width: 50px;
   height: 50px;
   border: none;
-  z-index: 10;
+  z-index: 10000;
   outline: none;
   cursor: pointer;
   transition: all 0.5s ease;
@@ -188,6 +166,7 @@ const UL = styled.ul`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* width: 100vw; */
 `;
 
 const LI = styled.li`

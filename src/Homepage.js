@@ -149,8 +149,9 @@ const Homepage = () => {
 
 const Container = styled.div`
   background-color: #f2efe9;
-  height: 100vh;
-  width: 100vw;
+  /* height: 100vh; */
+  width: 100%;
+  overflow-x: hidden;
 `;
 
 const WelcomeDiv = styled.div`
