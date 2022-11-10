@@ -4,6 +4,7 @@ import Fade from "react-reveal/Fade";
 import { ScrollRotate } from "react-scroll-rotate";
 import ReactPlayer from "react-player";
 import { AiFillGithub } from "react-icons/ai";
+import { AiFillBehanceSquare } from "react-icons/ai";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { HiOutlineMail } from "react-icons/hi";
 
@@ -15,9 +16,9 @@ const Homepage = () => {
           <Fade top>
             <H1>Hi! I'm Sarah</H1>
             <P>
-              I'm an ambitious full-stack developer and graphic designer from
-              Montreal who's enthusiastic about making sure creative visions
-              come to life.
+              I'm an ambitious UX/UI designer/full-stack developer/graphic
+              designer from Toronto who's enthusiastic about making sure
+              creative visions come to life.
             </P>
           </Fade>
         </Div1>
@@ -34,17 +35,61 @@ const Homepage = () => {
           <Div2>
             <H2>About Me</H2>
             <P>
-              I am a graphic designer turned full stack developer with a passion
-              and enthusiasm for web development. Having both the design
-              background and technical training, I am able to interpret and
-              transcribe creative visions through a technical view point and
+              I am a graphic designer turned full stack developer turned UX/UI
+              designer with a passion and enthusiasm for design. Having both the
+              design background and technical training, I am able to interpret
+              and transcribe creative visions through a technical view point and
               overcome their challenges.
             </P>
           </Div2>
         </Fade>
       </AboutMeDiv>
       <ProjectDiv id="projects">
-        <H2>Projects</H2>
+        <H2>UX/UI Projects</H2>
+        <Projects>
+          <Image src="/images/static.jpg" alt="arrow" />
+          <Div3>
+            <P style={{ fontWeight: "bold" }}>Account Management</P>
+            <PSmall>
+              I decided to recreate and rebrand Pet Centre Nature's website
+              because I felt that there was a lot of missing potential when it
+              came to who they are as an organization and how they represented
+              it through there website. I wanted to give it more of a modern and
+              refreshing feel as well as smoother user experience and clear
+              navigation.
+            </PSmall>
+            <PSmall>For more information on the project:</PSmall>
+            <a
+              style={{ color: "#6da06e", fontSize: "30px" }}
+              href="https://github.com/sarahghossen/Pet-Centre-Nature-Rebrand"
+            >
+              <AiFillBehanceSquare />
+            </a>
+          </Div3>
+        </Projects>
+        <Projects style={{ marginTop: "150px" }}>
+          <Image src="/images/static.jpg" alt="arrow" />
+          <Div3>
+            <P style={{ fontWeight: "bold" }}>Weebul</P>
+            <PSmall>
+              Cyborg Social Club is a fictional store where we sell futuristic
+              tech. The goal of this project is to build from scratch a fully
+              functional e-commerce store, working with both the front and
+              back-end. The focus was good teamwork, strong communication and a
+              good workflow.
+            </PSmall>
+            <PSmall>For more information on the project:</PSmall>
+            <a
+              style={{ color: "#6da06e", fontSize: "30px" }}
+              href="https://github.com/sarahghossen/Cyborg-Social-Club"
+            >
+              <AiFillBehanceSquare />
+            </a>
+          </Div3>
+        </Projects>
+      </ProjectDiv>
+      <ProjectDiv id="projects">
+        <H2>Dev Projects</H2>
         <Projects>
           <ReactPlayer url="https://youtu.be/t3SIcS5H8iA" />
           <Div3>
@@ -310,5 +355,7 @@ const IconDiv2 = styled.div`
     justify-content: center;
   }
 `;
+
+const Image = styled.img``;
 
 export default Homepage;
