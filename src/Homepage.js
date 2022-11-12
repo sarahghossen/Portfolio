@@ -47,41 +47,36 @@ const Homepage = () => {
       <ProjectDiv id="projects">
         <H2>UX/UI Projects</H2>
         <Projects>
-          <Image src="/images/static.jpg" alt="arrow" />
+          <Image src="/images/AccountManagement.png" alt="arrow" />
           <Div3>
             <P style={{ fontWeight: "bold" }}>Account Management</P>
             <PSmall>
-              I decided to recreate and rebrand Pet Centre Nature's website
-              because I felt that there was a lot of missing potential when it
-              came to who they are as an organization and how they represented
-              it through there website. I wanted to give it more of a modern and
-              refreshing feel as well as smoother user experience and clear
-              navigation.
+              The goal was to re design Raydiant's account management page to
+              make it self serve so that users are able to make changes to their
+              account and billing details without having to go through support.
             </PSmall>
             <PSmall>For more information on the project:</PSmall>
             <a
               style={{ color: "#6da06e", fontSize: "30px" }}
-              href="https://github.com/sarahghossen/Pet-Centre-Nature-Rebrand"
+              href="https://www.behance.net/gallery/156485053/Account-Management-Re-Design"
             >
               <AiFillBehanceSquare />
             </a>
           </Div3>
         </Projects>
         <Projects style={{ marginTop: "150px" }}>
-          <Image src="/images/static.jpg" alt="arrow" />
+          <Image src="/images/Weebul.png" alt="arrow" />
           <Div3>
-            <P style={{ fontWeight: "bold" }}>Weebul</P>
+            <P style={{ fontWeight: "bold" }}>Weebul App</P>
             <PSmall>
-              Cyborg Social Club is a fictional store where we sell futuristic
-              tech. The goal of this project is to build from scratch a fully
-              functional e-commerce store, working with both the front and
-              back-end. The focus was good teamwork, strong communication and a
-              good workflow.
+              Weebul is a mobile app that will allow users to have a much
+              smoother experience when finding food and places to do when
+              travelling.
             </PSmall>
             <PSmall>For more information on the project:</PSmall>
             <a
               style={{ color: "#6da06e", fontSize: "30px" }}
-              href="https://github.com/sarahghossen/Cyborg-Social-Club"
+              href="https://www.behance.net/gallery/156901301/Weebul-App"
             >
               <AiFillBehanceSquare />
             </a>
@@ -356,6 +351,8 @@ const IconDiv2 = styled.div`
   }
 `;
 
-const Image = styled.img``;
+const Image = styled.img`
+  width: 40vw;
+`;
 
 export default Homepage;
