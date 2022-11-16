@@ -36,11 +36,15 @@ const Homepage = () => {
           <Div2>
             <H2>About Me</H2>
             <P>
-              I am a graphic designer turned full stack developer turned UX/UI
-              designer with a passion and enthusiasm for design. Having both the
-              design background and technical training, I am able to interpret
-              and transcribe creative visions through a technical view point and
-              overcome their challenges.
+              In 2019 I graduated from college and got a DEC in graphic design.
+              Fast forward to 2021 and I have successfully completed a 3 month
+              coding boot camp and this year, I not only have experience in
+              UX/UI but I completed a 3 month UX course. Throughout my journey,
+              I have possessed a motivated, hardworking and energetic work ethic
+              and I’m constantly trying to learn and evolve to become a better
+              version of myself. Not only that but I have made a significance in
+              my previous employer by improving their customer experience with
+              our platforms re-design.
             </P>
           </Div2>
         </Fade>
