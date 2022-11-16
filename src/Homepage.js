@@ -16,9 +16,10 @@ const Homepage = () => {
           <Fade top>
             <H1>Hi! I'm Sarah</H1>
             <P>
-              I'm an ambitious UX/UI designer/full-stack developer/graphic
-              designer from Toronto who's enthusiastic about making sure
-              creative visions come to life.
+              I’m an ambitious and enthusiastic UI/UX designer with a background
+              in graphic design and web development located in Toronto. I am
+              dedicated to bring forth meaningful and user-centered design and
+              create powerful experiences.
             </P>
           </Fade>
         </Div1>
