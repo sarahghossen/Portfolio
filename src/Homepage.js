@@ -31,11 +31,11 @@ const Homepage = () => {
         <ImgArrow src="/images/arrow.png" alt="arrow" />
       </ArrowDiv>
       <AboutMeDiv id="about">
-        <ImgMe src="/images/Me.png" alt="picture of me" />
+        <ImgMe src="/images/Me3.0.png" alt="picture of me" />
         <Fade top>
           <Div2>
             <H2>About Me</H2>
-            <P>
+            <AboutMe>
               In 2019 I graduated from college and got a DEC in graphic design.
               Fast forward to 2021 and I have successfully completed a 3 month
               coding boot camp and this year, I not only have experience in
@@ -45,7 +45,7 @@ const Homepage = () => {
               version of myself. Not only that but I have made a significance in
               my previous employer by improving their customer experience with
               our platforms re-design.
-            </P>
+            </AboutMe>
           </Div2>
         </Fade>
       </AboutMeDiv>
@@ -250,6 +250,12 @@ const H1 = styled.h1`
 
 const P = styled.p`
   font-size: 25px;
+  font-size: bold;
+  color: #808080;
+`;
+
+const AboutMe = styled.p`
+  font-size: 20px;
   color: #808080;
 `;
 
