@@ -60,13 +60,18 @@ const Homepage = () => {
               make it self serve so that users are able to make changes to their
               account and billing details without having to go through support.
             </PSmall>
-            <PSmall>For more information on the project:</PSmall>
             <a
+              style={{ color: "#6da06e", fontWeight: "bold" }}
+              href="https://www.behance.net/gallery/156485053/Account-Management-Re-Design"
+            >
+              Click here for more information on the Project!
+            </a>
+            {/* <a
               style={{ color: "#6da06e", fontSize: "30px" }}
               href="https://www.behance.net/gallery/156485053/Account-Management-Re-Design"
             >
               <AiFillBehanceSquare />
-            </a>
+            </a> */}
           </Div3>
         </Projects>
         <Projects style={{ marginTop: "150px" }}>
@@ -78,13 +83,18 @@ const Homepage = () => {
               smoother experience when finding food and places to do when
               travelling.
             </PSmall>
-            <PSmall>For more information on the project:</PSmall>
             <a
+              style={{ color: "#6da06e", fontWeight: "bold" }}
+              href="https://www.behance.net/gallery/156901301/Weebul-App"
+            >
+              Click here for more information on the Project!
+            </a>
+            {/* <a
               style={{ color: "#6da06e", fontSize: "30px" }}
               href="https://www.behance.net/gallery/156901301/Weebul-App"
             >
               <AiFillBehanceSquare />
-            </a>
+            </a> */}
           </Div3>
         </Projects>
       </ProjectDiv>
@@ -116,13 +126,18 @@ const Homepage = () => {
                 here
               </a>
             </PSmall>
-            <PSmall>For more information on the project:</PSmall>
             <a
+              style={{ color: "#6da06e", fontWeight: "bold" }}
+              href="https://github.com/sarahghossen/Pet-Centre-Nature-Rebrand"
+            >
+              Click here for more information on the Project!
+            </a>{" "}
+            {/* <a
               style={{ color: "#6da06e", fontSize: "30px" }}
               href="https://github.com/sarahghossen/Pet-Centre-Nature-Rebrand"
             >
               <AiFillGithub />
-            </a>
+            </a> */}
           </Div3>
         </Projects>
         <Projects style={{ marginTop: "150px" }}>
@@ -144,13 +159,18 @@ const Homepage = () => {
             <PSmall>
               Tools used include: React.js, Redux, Node.js and MongoDB.
             </PSmall>
-            <PSmall>For more information on the project:</PSmall>
             <a
+              style={{ color: "#6da06e", fontWeight: "bold" }}
+              href="https://github.com/sarahghossen/Cyborg-Social-Club"
+            >
+              Click here for more information on the Project!
+            </a>
+            {/* <a
               style={{ color: "#6da06e", fontSize: "30px" }}
               href="https://github.com/sarahghossen/Cyborg-Social-Club"
             >
               <AiFillGithub />
-            </a>
+            </a> */}
           </Div3>
         </Projects>
       </ProjectDiv>
