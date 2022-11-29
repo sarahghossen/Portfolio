@@ -29,9 +29,6 @@ const Header = () => {
         <StyledLink to="contact" spy={true} smooth={true}>
           Contact
         </StyledLink>
-        <IconDiv href="https://github.com/sarahghossen">
-          <AiFillGithub />
-        </IconDiv>
         <IconDiv href="https://www.linkedin.com/in/sarahghossen/">
           <AiOutlineLinkedin />
         </IconDiv>

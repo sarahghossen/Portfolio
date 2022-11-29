@@ -52,6 +52,29 @@ const Homepage = () => {
       <ProjectDiv id="projects">
         <H2>UX/UI Projects</H2>
         <Projects>
+          <Image src="/images/Weebul3.0.jpg" alt="arrow" />
+          <Div3>
+            <P style={{ fontWeight: "bold" }}>Weebul App</P>
+            <PSmall>
+              Weebul is a mobile app that will allow users to have a much
+              smoother experience when finding food and places to do when
+              travelling.
+            </PSmall>
+            <a
+              style={{ color: "#6da06e", fontWeight: "bold" }}
+              href="https://www.behance.net/gallery/156901301/Weebul-App"
+            >
+              Click here for more information on the Project!
+            </a>
+            {/* <a
+              style={{ color: "#6da06e", fontSize: "30px" }}
+              href="https://www.behance.net/gallery/156901301/Weebul-App"
+            >
+              <AiFillBehanceSquare />
+            </a> */}
+          </Div3>
+        </Projects>
+        <Projects style={{ marginTop: "150px" }}>
           <Image src="/images/AccountManagement.png" alt="arrow" />
           <Div3>
             <P style={{ fontWeight: "bold" }}>Account Management</P>
@@ -69,29 +92,6 @@ const Homepage = () => {
             {/* <a
               style={{ color: "#6da06e", fontSize: "30px" }}
               href="https://www.behance.net/gallery/156485053/Account-Management-Re-Design"
-            >
-              <AiFillBehanceSquare />
-            </a> */}
-          </Div3>
-        </Projects>
-        <Projects style={{ marginTop: "150px" }}>
-          <Image src="/images/Weebul.png" alt="arrow" />
-          <Div3>
-            <P style={{ fontWeight: "bold" }}>Weebul App</P>
-            <PSmall>
-              Weebul is a mobile app that will allow users to have a much
-              smoother experience when finding food and places to do when
-              travelling.
-            </PSmall>
-            <a
-              style={{ color: "#6da06e", fontWeight: "bold" }}
-              href="https://www.behance.net/gallery/156901301/Weebul-App"
-            >
-              Click here for more information on the Project!
-            </a>
-            {/* <a
-              style={{ color: "#6da06e", fontSize: "30px" }}
-              href="https://www.behance.net/gallery/156901301/Weebul-App"
             >
               <AiFillBehanceSquare />
             </a> */}
@@ -181,14 +181,6 @@ const Homepage = () => {
             <P>See anything you like? Don't hesitate to contact me!</P>
           </FormDiv>
           <IconDiv2>
-            <IconDiv>
-              <a
-                style={{ color: "#6da06e", fontSize: "40px" }}
-                href="https://github.com/sarahghossen"
-              >
-                <AiFillGithub />
-              </a>
-            </IconDiv>
             <IconDiv>
               <a
                 style={{ color: "#6da06e", fontSize: "40px" }}
